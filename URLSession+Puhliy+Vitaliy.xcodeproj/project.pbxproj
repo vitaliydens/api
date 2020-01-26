@@ -7,23 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D84FC32023DDD8FA00E48DF4 /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84FC31F23DDD8FA00E48DF4 /* Branch.swift */; };
+		D84FC32423DDDA6900E48DF4 /* RatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84FC32223DDDA6900E48DF4 /* RatesViewController.swift */; };
+		D84FC32523DDDA6900E48DF4 /* BranchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84FC32323DDDA6900E48DF4 /* BranchesViewController.swift */; };
+		D84FC32A23DDDD4900E48DF4 /* BranchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84FC32823DDDD4900E48DF4 /* BranchCell.swift */; };
+		D84FC32B23DDDD4900E48DF4 /* RateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84FC32923DDDD4900E48DF4 /* RateCell.swift */; };
 		D8C5CDB723DC978C00DA161F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5CDB623DC978C00DA161F /* AppDelegate.swift */; };
-		D8C5CDB923DC978C00DA161F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5CDB823DC978C00DA161F /* SceneDelegate.swift */; };
-		D8C5CDBB23DC978C00DA161F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5CDBA23DC978C00DA161F /* ViewController.swift */; };
 		D8C5CDBE23DC978C00DA161F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C5CDBC23DC978C00DA161F /* Main.storyboard */; };
 		D8C5CDC023DC978D00DA161F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C5CDBF23DC978D00DA161F /* Assets.xcassets */; };
 		D8C5CDC323DC978D00DA161F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C5CDC123DC978D00DA161F /* LaunchScreen.storyboard */; };
+		D8C5CDCC23DC989200DA161F /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5CDCB23DC989200DA161F /* APIService.swift */; };
+		D8C5CDCF23DC98EB00DA161F /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5CDCE23DC98EB00DA161F /* Rate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D84FC31F23DDD8FA00E48DF4 /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
+		D84FC32223DDDA6900E48DF4 /* RatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatesViewController.swift; sourceTree = "<group>"; };
+		D84FC32323DDDA6900E48DF4 /* BranchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchesViewController.swift; sourceTree = "<group>"; };
+		D84FC32823DDDD4900E48DF4 /* BranchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BranchCell.swift; sourceTree = "<group>"; };
+		D84FC32923DDDD4900E48DF4 /* RateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateCell.swift; sourceTree = "<group>"; };
 		D8C5CDB323DC978C00DA161F /* URLSession+Puhliy+Vitaliy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "URLSession+Puhliy+Vitaliy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C5CDB623DC978C00DA161F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D8C5CDB823DC978C00DA161F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D8C5CDBA23DC978C00DA161F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D8C5CDBD23DC978C00DA161F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8C5CDBF23DC978D00DA161F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8C5CDC223DC978D00DA161F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8C5CDC423DC978D00DA161F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8C5CDCB23DC989200DA161F /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		D8C5CDCE23DC98EB00DA161F /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +47,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D84FC32123DDDA4300E48DF4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D84FC32323DDDA6900E48DF4 /* BranchesViewController.swift */,
+				D84FC32223DDDA6900E48DF4 /* RatesViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D84FC32C23DDDD5100E48DF4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D84FC32823DDDD4900E48DF4 /* BranchCell.swift */,
+				D84FC32923DDDD4900E48DF4 /* RateCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		D8C5CDAA23DC978C00DA161F = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +84,34 @@
 		D8C5CDB523DC978C00DA161F /* URLSession+Puhliy+Vitaliy */ = {
 			isa = PBXGroup;
 			children = (
+				D84FC32C23DDDD5100E48DF4 /* Cells */,
+				D84FC32123DDDA4300E48DF4 /* ViewControllers */,
+				D8C5CDCD23DC98C800DA161F /* Entities */,
+				D8C5CDCA23DC987F00DA161F /* Network */,
 				D8C5CDB623DC978C00DA161F /* AppDelegate.swift */,
-				D8C5CDB823DC978C00DA161F /* SceneDelegate.swift */,
-				D8C5CDBA23DC978C00DA161F /* ViewController.swift */,
 				D8C5CDBC23DC978C00DA161F /* Main.storyboard */,
 				D8C5CDBF23DC978D00DA161F /* Assets.xcassets */,
 				D8C5CDC123DC978D00DA161F /* LaunchScreen.storyboard */,
 				D8C5CDC423DC978D00DA161F /* Info.plist */,
 			);
 			path = "URLSession+Puhliy+Vitaliy";
+			sourceTree = "<group>";
+		};
+		D8C5CDCA23DC987F00DA161F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D8C5CDCB23DC989200DA161F /* APIService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D8C5CDCD23DC98C800DA161F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				D8C5CDCE23DC98EB00DA161F /* Rate.swift */,
+				D84FC31F23DDD8FA00E48DF4 /* Branch.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8C5CDBB23DC978C00DA161F /* ViewController.swift in Sources */,
+				D8C5CDCF23DC98EB00DA161F /* Rate.swift in Sources */,
+				D84FC32523DDDA6900E48DF4 /* BranchesViewController.swift in Sources */,
+				D84FC32023DDD8FA00E48DF4 /* Branch.swift in Sources */,
+				D8C5CDCC23DC989200DA161F /* APIService.swift in Sources */,
 				D8C5CDB723DC978C00DA161F /* AppDelegate.swift in Sources */,
-				D8C5CDB923DC978C00DA161F /* SceneDelegate.swift in Sources */,
+				D84FC32B23DDDD4900E48DF4 /* RateCell.swift in Sources */,
+				D84FC32A23DDDD4900E48DF4 /* BranchCell.swift in Sources */,
+				D84FC32423DDDA6900E48DF4 /* RatesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
