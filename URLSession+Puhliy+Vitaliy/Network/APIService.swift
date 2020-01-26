@@ -6,57 +6,51 @@
 //  Copyright © 2020 Developer. All rights reserved.
 //
 
-import Foundation
-class APIService{
-    func loadRate(completionHandler: @escaping ([Rate]?, Error?) -> Void) {
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = "api.privatbank.ua"
-        components.path = "/p24api/pubinfo"
-        components.queryItems = [URLQueryItem(name: "exchange", value: nil),
-                                 URLQueryItem(name: "json", value: nil),
-                                 URLQueryItem(name: "coursid", value: "11")]
-       
-        guard let url = components.url else { return }
-         print(url)
-        URLSession
-            .shared
-            .dataTask(with: url) { data, response, error in
-                print(response)
-                if let data = data {
-                    do {
-                        let rates = try JSONDecoder().decode([Rate].self, from: data)
-                        completionHandler(rates, nil)
-                    } catch {
-                        print(error.localizedDescription)
-                        completionHandler(nil, error)
-                    }
-                }
-        }.resume()
+import Moya
+
+enum APIService {
+    case getRate
+    case getBranches(serchSrting: String)
+}
+
+extension APIService: TargetType {
+    var sampleData: Data {
+        return Data()
     }
     
-    func loadBranches(searchString: String, completionHandler: @escaping ([Branch]?, Error?) -> Void) {
-        var components = URLComponents()
-        components.scheme = "https"
-        components.host = "api.privatbank.ua"
-        components.path = "/p24api/pboffice"
-        components.queryItems = [URLQueryItem(name: "json", value: nil),
-                                 URLQueryItem(name: "city", value: searchString),
-                                 URLQueryItem(name: "address", value: nil)]
-        guard let url = components.url else { return }
-        print(url)
-        URLSession
-            .shared
-            .dataTask(with: url) { (data, response, error) in
-                if let data = data {
-                    do {
-                        let branches = try JSONDecoder().decode([Branch].self, from: data)
-                        completionHandler(branches, nil)
-                    } catch {
-                        print(error.localizedDescription)
-                        completionHandler(nil, error)
-                    }
-                }
-        }.resume()
+    var headers: [String: String]? {
+        return nil
+    }
+    
+    var method: Method {
+        .get
+    }
+    
+    var baseURL: URL {
+        return URL(string: "https://api.privatbank.ua/p24api/")!
+    }
+
+    var path: String {
+        switch self {
+        case .getRate:
+            return "pubinfo"
+        case .getBranches:
+            return "pboffice"
+        }
+    }
+
+    var task: Task {
+        switch self {
+        case .getRate:
+            return .requestParameters(parameters: ["exchange": "",
+                                                   "json": "",
+                                                   "coursid": "11"],
+                                      encoding: URLEncoding.queryString)
+        case .getBranches(serchSrting: let search):
+            return .requestParameters(parameters: ["json": "",
+                                                   "city": search,
+                                                   "address": ""],
+                                      encoding: URLEncoding.queryString)
+        }
     }
 }

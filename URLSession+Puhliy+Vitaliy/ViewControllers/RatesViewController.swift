@@ -7,21 +7,35 @@
 //
 
 import UIKit
+import Moya
 
 class RatesViewController: UIViewController {
     
     @IBOutlet private weak var rateTableView: UITableView!
     
-    private let apiService = APIService()
+    private let provider = MoyaProvider<APIService>()
+    
     private var rates = [Rate]()
     
     @IBAction func btnReloadGatesClicked(_ sender: UIBarButtonItem) {
-        self.apiService.loadRate(completionHandler: { [weak self] (rates, error) in
-            DispatchQueue.main.async {
-                self?.rates = rates ?? []
-                self?.rateTableView.reloadData()
+        provider.request(.getRate) { rates in
+            do {
+                let response = try rates.get()
+                let object = try response.map([Rate].self)
+                DispatchQueue.main.async {
+                    self.rates = object
+                    self.rateTableView.reloadData()
+                }
+            } catch {
+                print(error.localizedDescription)
             }
-        })
+        }
+//        self.apiService.loadRate(completionHandler: { [weak self] (rates, error) in
+//            DispatchQueue.main.async {
+//                self?.rates = rates ?? []
+//                self?.rateTableView.reloadData()
+//            }
+//        })
     }
 }
 

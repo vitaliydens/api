@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Moya
 
 class BranchesViewController: UIViewController {
     
     @IBOutlet private weak var branchesTableView: UITableView!
-    
-    private let apiService = APIService()
+
+     private let provider = MoyaProvider<APIService>()
     private let cities = ["Одесса",
                         "Днепр",
                         "Чернигов",
@@ -30,16 +31,24 @@ class BranchesViewController: UIViewController {
     }
     
     private func getBranches(searchValue: String) {
-        apiService.loadBranches(searchString: searchValue) { [weak self] (branches, error) in
-            DispatchQueue.main.async {
-                self?.branches = branches ?? []
-                self?.branchesTableView.reloadData()
+        provider.request(.getBranches(serchSrting: searchValue) ) { rates in
+            do {
+                let response = try rates
+                    .get()
+                    .filter(statusCode: 200)
+                let object = try response.map([Branch].self)
+                DispatchQueue.main.async {
+                    self.branches = object
+                    self.branchesTableView.reloadData()
+                }
+            } catch {
+                print(error.localizedDescription)
             }
         }
     }
     
     private func showAlert() {
-        let alert = UIAlertController(title: "Chosse city", message: "\n\n\n\n\n\n\n", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Choose city", message: "\n\n\n\n\n\n\n", preferredStyle: .alert)
         let pickerFrame = UIPickerView(frame: CGRect(x: 20, y: 20, width: 250, height: 140))
         alert.view.addSubview(pickerFrame)
         pickerFrame.dataSource = self

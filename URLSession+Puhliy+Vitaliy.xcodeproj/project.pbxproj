@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13A9FFEC1614754FCC3B840E /* Pods_URLSession_Puhliy_Vitaliy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6F3027EEFC975A456326F5 /* Pods_URLSession_Puhliy_Vitaliy.framework */; };
 		D84FC32023DDD8FA00E48DF4 /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84FC31F23DDD8FA00E48DF4 /* Branch.swift */; };
 		D84FC32423DDDA6900E48DF4 /* RatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84FC32223DDDA6900E48DF4 /* RatesViewController.swift */; };
 		D84FC32523DDDA6900E48DF4 /* BranchesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D84FC32323DDDA6900E48DF4 /* BranchesViewController.swift */; };
@@ -21,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F2F9627D07A694301779FA5 /* Pods-URLSession+Puhliy+Vitaliy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLSession+Puhliy+Vitaliy.debug.xcconfig"; path = "Target Support Files/Pods-URLSession+Puhliy+Vitaliy/Pods-URLSession+Puhliy+Vitaliy.debug.xcconfig"; sourceTree = "<group>"; };
+		5F504BB4BCEF34BB8C0BA00C /* Pods-URLSession+Puhliy+Vitaliy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-URLSession+Puhliy+Vitaliy.release.xcconfig"; path = "Target Support Files/Pods-URLSession+Puhliy+Vitaliy/Pods-URLSession+Puhliy+Vitaliy.release.xcconfig"; sourceTree = "<group>"; };
+		8E6F3027EEFC975A456326F5 /* Pods_URLSession_Puhliy_Vitaliy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_URLSession_Puhliy_Vitaliy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D84FC31F23DDD8FA00E48DF4 /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
 		D84FC32223DDDA6900E48DF4 /* RatesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatesViewController.swift; sourceTree = "<group>"; };
 		D84FC32323DDDA6900E48DF4 /* BranchesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BranchesViewController.swift; sourceTree = "<group>"; };
@@ -41,12 +45,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13A9FFEC1614754FCC3B840E /* Pods_URLSession_Puhliy_Vitaliy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6D7485CC6F0401506BE83BC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F2F9627D07A694301779FA5 /* Pods-URLSession+Puhliy+Vitaliy.debug.xcconfig */,
+				5F504BB4BCEF34BB8C0BA00C /* Pods-URLSession+Puhliy+Vitaliy.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D84FC32123DDDA4300E48DF4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +85,8 @@
 			children = (
 				D8C5CDB523DC978C00DA161F /* URLSession+Puhliy+Vitaliy */,
 				D8C5CDB423DC978C00DA161F /* Products */,
+				A6D7485CC6F0401506BE83BC /* Pods */,
+				E128D22951E039D149C5BFC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,6 +131,14 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		E128D22951E039D149C5BFC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E6F3027EEFC975A456326F5 /* Pods_URLSession_Puhliy_Vitaliy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,9 +146,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D8C5CDC723DC978D00DA161F /* Build configuration list for PBXNativeTarget "URLSession+Puhliy+Vitaliy" */;
 			buildPhases = (
+				EDAF7FFECDE6EDD1C3A85A1A /* [CP] Check Pods Manifest.lock */,
 				D8C5CDAF23DC978C00DA161F /* Sources */,
 				D8C5CDB023DC978C00DA161F /* Frameworks */,
 				D8C5CDB123DC978C00DA161F /* Resources */,
+				1D0EBC735F1BBDD0475010E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -179,6 +206,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D0EBC735F1BBDD0475010E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-URLSession+Puhliy+Vitaliy/Pods-URLSession+Puhliy+Vitaliy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-URLSession+Puhliy+Vitaliy/Pods-URLSession+Puhliy+Vitaliy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-URLSession+Puhliy+Vitaliy/Pods-URLSession+Puhliy+Vitaliy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDAF7FFECDE6EDD1C3A85A1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-URLSession+Puhliy+Vitaliy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D8C5CDAF23DC978C00DA161F /* Sources */ = {
@@ -334,6 +403,7 @@
 		};
 		D8C5CDC823DC978D00DA161F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F2F9627D07A694301779FA5 /* Pods-URLSession+Puhliy+Vitaliy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -351,6 +421,7 @@
 		};
 		D8C5CDC923DC978D00DA161F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F504BB4BCEF34BB8C0BA00C /* Pods-URLSession+Puhliy+Vitaliy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
